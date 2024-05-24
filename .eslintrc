@@ -55,6 +55,7 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/no-unknown-property": ["error", { "ignore": ["css", "animate", "sx"] }],
     "react/prop-types": 0,
+    "arrow-body-style": ["error", "as-needed"],
     "react/jsx-no-useless-fragment": [
       1,
       {
