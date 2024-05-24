@@ -1,13 +1,24 @@
-import { PostListView } from 'src/sections/blog/view';
+// import { PostListView } from 'src/sections/blog/view';
 
-// ----------------------------------------------------------------------
+// // ----------------------------------------------------------------------
 
-export const metadata = {
-  title: 'Dashboard: Post List',
-};
+// export const metadata = {
+//   title: 'Dashboard: Post List',
+// };
 
-export default function PostListPage() {
+// export default function PostListPage() {
+//   return (
+//     <PostListView />
+//   )
+// }
+
+
+import React from 'react'
+
+const PostListPage = () => {
   return (
-    <PostListView />
+    <div>PostListPage</div>
   )
 }
+
+export default PostListPage
