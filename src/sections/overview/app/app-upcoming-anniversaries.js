@@ -45,57 +45,79 @@ export default function UpcomingAnniversaries({ title, subheader, tableLabels, t
     fetchData();
   }, []);
 
+
+  const getBackgroundColor = (idx) => {
+    switch(idx) {
+      case 0:
+        return '#d6f5e8';
+      case 1:
+        return '#fddeff';
+      case 2:
+      case 3:
+        return '#d6f3f9';
+      default:
+        return '';
+    }
+  };
+  
+  const getColor = (idx) => {
+    switch(idx) {
+      case 0:
+        return '#007867';
+      case 1:
+        return '#511ab7';
+      case 2:
+      case 3:
+        return '#006c9c';
+      default:
+        return '';
+    }
+  };
+  
+
   return (
     <Card {...other} className='UpcomingAnniversaries'>
-      <CardHeader title={title} subheader={subheader} sx={{ mb: 3 }} avatar={<Icon icon="solar:cup-star-bold" style={{ 
-					color: '#1877F2',
-					fontSize: '2.8rem'
-				 }}/>} />
+      <CardHeader title={title} subheader={subheader} sx={{ mb: 3 }} avatar={<Icon icon="solar:cup-star-bold" style={{
+        color: '#1877F2',
+        fontSize: '2.8rem'
+      }} />} />
       {anniversariesData?.data?.length > 0 && (
-      <TableContainer sx={{ overflow: 'unset' }}>
-        <Scrollbar>
-          <Table sx={{ minWidth: 600 }}>
-            <TableHeadCustom headLabel={tableLabels} />
+        <TableContainer sx={{ overflow: 'unset' }}>
+          <Scrollbar>
+            <Table sx={{ minWidth: 600 }}>
+              <TableHeadCustom headLabel={tableLabels} />
 
-            <TableBody>
-              {anniversariesData?.data.map((row, idx) => (
-                <TableRow key={row.name}>
-                  <TableCell sx={{ display: 'flex', alignItems: 'center' }}>
-                    <Avatar
-                      variant="circle"
-                      alt={row.name}
-                      src="https://api-dev-minimal-v510.vercel.app/assets/images/avatar/avatar_2.jpg"
-                      sx={{ mr: 2, width: 48, height: 48 }}
-                    />
-                    {row.name}
-                  </TableCell>
-                  <TableCell>
-                    <Box sx={{
-                      backgroundColor: `${
-                        idx === 0 ? '#d6f5e8' :
-                        idx === 1 ? '#fddeff' :
-                        idx === 2 ? '#d6f3f9' :
-                        idx === 3 && '#d6f3f9' 
-                      }`,
-                      color: `${
-                        idx === 0 ? '#007867' :
-                        idx === 1 ? '#511ab7' :
-                        idx === 2 ? '#006c9c' :
-                        idx === 3 && '#006c9c' 
-                      }`,
-                      display: 'inline',
-                      padding: '4px 6px',
-                      borderRadius: '5px',
-                      fontWeight: 600,
-                    }}>{row.total_years} {row.total_years > 1 ? 'Years' : 'Year'}</Box>
-                  </TableCell>
-                  <TableCell>{row.anniversary_date}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </Scrollbar>
-      </TableContainer>
+              <TableBody>
+                {anniversariesData?.data.map((row, idx) => (
+                  <TableRow key={row.name}>
+                    <TableCell sx={{ display: 'flex', alignItems: 'center' }}>
+                      <Avatar
+                        variant="circle"
+                        alt={row.name}
+                        src="https://api-dev-minimal-v510.vercel.app/assets/images/avatar/avatar_2.jpg"
+                        sx={{ mr: 2, width: 48, height: 48 }}
+                      />
+                      {row.name}
+                    </TableCell>
+                    <TableCell>
+                      <Box sx={{
+                        backgroundColor: getBackgroundColor(idx),
+                        color: getColor(idx),
+                        display: 'inline',
+                        padding: '4px 6px',
+                        borderRadius: '5px',
+                        fontWeight: 600,
+                      }}>
+                        {row.total_years} {row.total_years > 1 ? 'Years' : 'Year'}
+                      </Box>
+                    </TableCell>
+                    <TableCell>{row.anniversary_date}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </Scrollbar>
+        </TableContainer>
       )}
       {/* <Divider sx={{ borderStyle: 'dashed' }} />
 
