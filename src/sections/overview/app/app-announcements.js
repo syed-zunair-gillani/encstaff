@@ -7,10 +7,8 @@ import { Dialog, DialogTitle, Box, Button, Tooltip, DialogContent, DialogActions
 
 import './app-customstyle.css';
 import React, { useState } from 'react';
-// import { Modal } from '../app/createAnnouncement/createAnnouncementModal';
 import useModal from '../../../hooks/useModal'
 
-// app/createAnnouncement/createAnnouncementModal
 // ----------------------------------------------------------------------
 
 export default function AppAnnouncements({ list, ...other }) {
