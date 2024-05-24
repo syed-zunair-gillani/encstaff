@@ -36,7 +36,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "src/app/dashboard/post/[title]/edit/page.jsx", "src/app/dashboard/post/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]

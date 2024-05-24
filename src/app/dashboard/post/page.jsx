@@ -7,5 +7,7 @@ export const metadata = {
 };
 
 export default function PostListPage() {
-  return <PostListView />;
+  return (
+    <PostListView />
+  )
 }

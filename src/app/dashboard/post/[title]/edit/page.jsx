@@ -9,13 +9,13 @@ export const metadata = {
   title: 'Dashboard: Post Edit',
 };
 
-type Props = {
-  params: {
-    title: string;
-  };
-};
+// type Props = {
+//   params: {
+//     title: string;
+//   };
+// };
 
-export default function PostEditPage({ params }: Props) {
+export default function PostEditPage({ params }) {
   const { title } = params;
 
   return <PostEditView title={title} />;
@@ -24,7 +24,7 @@ export default function PostEditPage({ params }: Props) {
 export async function generateStaticParams() {
   const res = await axios.get(endpoints.post.list);
 
-  return res.data.posts.map((post: { title: string }) => ({
+  return res.data.posts.map((post) => ({
     title: paramCase(post.title),
   }));
 }
