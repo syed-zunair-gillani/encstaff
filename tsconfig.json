@@ -44,9 +44,7 @@
     "jsx": "react",
     "forceConsistentCasingInFileNames": true
   },
-  "rules": {
-    "react/jsx-filename-extension": [1, { "ignoreFilesWithoutCode": true }]
-  },
+  "react/jsx-filename-extension": "off",
   "include": [
     "next-env.d.ts",
     "**/*.ts",
