@@ -1,5 +1,5 @@
 import { m } from 'framer-motion';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, FC } from 'react';
 
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -48,7 +48,7 @@ const TABS = [
 
 // ----------------------------------------------------------------------
 
-export default function NotificationsPopover() {
+const NotificationsPopover:FC<any> = () => {
   const drawer = useBoolean();
 
   const smUp = useResponsive('up', 'sm');
@@ -189,3 +189,6 @@ export default function NotificationsPopover() {
     </>
   );
 }
+
+
+export default NotificationsPopover
