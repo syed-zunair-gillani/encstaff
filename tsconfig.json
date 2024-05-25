@@ -44,7 +44,22 @@
     "jsx": "react",
     "forceConsistentCasingInFileNames": true
   },
-  "react/jsx-filename-extension": "off",
+  "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", "ts", ".tsx"] }],
+  "eslintConfig": {
+    "rules": {
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".tsx",
+            ".jsx",
+            ".js",
+            ".ts"
+          ]
+        }
+      ]
+    }
+  },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
