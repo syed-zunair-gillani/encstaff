@@ -12,19 +12,19 @@ import { ItemProps } from '../types';
 
 // ----------------------------------------------------------------------
 
-type Props = {
-  node: ItemProps;
-  depth?: number;
-  length?: number;
-  sx?: SxProps<Theme>;
-};
+// type Props = {
+//   node: ItemProps;
+//   depth?: number;
+//   length?: number;
+//   sx?: SxProps<Theme>;
+// };
 
-export default function GroupNode({ node, depth, length, sx }: Props) {
+export default function GroupNode({ node, depth, length, sx }) {
   const theme = useTheme();
 
   const lightMode = theme.palette.mode === 'light';
 
-  const styles = (color: ColorSchema) => ({
+  const styles = (color) => ({
     bgcolor: alpha(theme.palette[color].main, 0.08),
     border: `solid 1px ${alpha(theme.palette[color].main, 0.24)}`,
     color: lightMode ? theme.palette[color].darker : theme.palette[color].lighter,
