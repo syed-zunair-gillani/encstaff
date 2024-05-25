@@ -7,7 +7,7 @@ import { flattenArray } from 'src/utils/flatten-array';
 import GroupNode from './common/group-node';
 import SimpleNode from './common/simple-node';
 import StandardNode from './common/standard-node';
-import { ListProps, SubListProps, OrganizationalChartProps } from './types';
+// import { ListProps, SubListProps, OrganizationalChartProps } from './types';
 
 // ----------------------------------------------------------------------
 
@@ -16,7 +16,7 @@ export default function OrganizationalChart({
   variant = 'simple',
   sx,
   ...other
-}: OrganizationalChartProps) {
+}) {
   const theme = useTheme();
 
   return (
@@ -48,7 +48,7 @@ export default function OrganizationalChart({
 
 // ----------------------------------------------------------------------
 
-export function List({ data, depth, variant, sx }: ListProps) {
+export function List({ data, depth, variant, sx }) {
   const hasChild = data.children && !!data.children;
 
   return (
@@ -80,7 +80,7 @@ export function List({ data, depth, variant, sx }: ListProps) {
 
 // ----------------------------------------------------------------------
 
-function SubList({ data, depth, variant, sx }: SubListProps) {
+function SubList({ data, depth, variant, sx }) {
   return (
     <>
       {data.map((list) => (

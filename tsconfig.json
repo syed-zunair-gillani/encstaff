@@ -50,7 +50,7 @@
     "src/app/dashboard/post/[title]/edit/page.jsx",
     "src/app/dashboard/post/page.jsx",
     "src/components/label/label.jsx"
-, "src/components/organizational-chart/common/group-node.jsx"  ],
+, "src/components/organizational-chart/common/group-node.jsx", "src/components/organizational-chart/organizational-chart.jsx"  ],
   "exclude": [
     "node_modules"
   ]
