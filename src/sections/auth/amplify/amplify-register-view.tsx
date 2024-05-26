@@ -71,10 +71,10 @@ export default function AmplifyRegisterView() {
       const href = `${paths.auth.amplify.verify}?${searchParams}`;
 
       router.push(href);
-    } catch (error) {
+    } catch (error:any) {
       console.error(error);
       reset();
-      setErrorMsg(typeof error === 'string' ? error : error.message);
+      setErrorMsg(typeof error === 'string' ? error : error?.message);
     }
   });
 
