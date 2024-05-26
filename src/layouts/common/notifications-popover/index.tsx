@@ -1,5 +1,5 @@
 import { m } from 'framer-motion';
-import { useState, useCallback, FC } from 'react';
+import { useState, useCallback } from 'react';
 
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -48,7 +48,7 @@ const TABS = [
 
 // ----------------------------------------------------------------------
 
-const NotificationsPopover:FC<any> = () => {
+const NotificationsPopover = () => {
   const drawer = useBoolean();
 
   const smUp = useResponsive('up', 'sm');
@@ -111,7 +111,7 @@ const NotificationsPopover:FC<any> = () => {
                 'default'
               }
             >
-              {tab.count}
+              {`${tab?.count}`}
             </Label>
           }
           sx={{
