@@ -63,7 +63,7 @@ export default function MailDetails({ mail, renderLabel }: Props) {
               key={label.id}
               sx={{
                 bgcolor: alpha(label.color, 0.16),
-                color: (theme) =>
+                color: (theme:any) =>
                   theme.palette.mode === 'light'
                     ? darken(label.color, 0.24)
                     : lighten(label.color, 0.24),
