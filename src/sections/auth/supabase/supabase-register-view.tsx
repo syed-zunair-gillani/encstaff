@@ -70,10 +70,10 @@ export default function FirebaseRegisterView() {
       const href = `${paths.auth.supabase.verify}?${searchParams}`;
 
       router.push(href);
-    } catch (error) {
+    } catch (error:any) {
       console.error(error);
       reset();
-      setErrorMsg(typeof error === 'string' ? error : error.message);
+      setErrorMsg(typeof error === 'string' ? error : error?.message);
     }
   });
 

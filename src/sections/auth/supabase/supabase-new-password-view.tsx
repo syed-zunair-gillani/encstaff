@@ -65,10 +65,10 @@ export default function SupabaseNewPasswordView() {
       await updatePassword?.(data.password);
 
       router.push(paths.dashboard.root);
-    } catch (error) {
+    } catch (error:any) {
       console.error(error);
       reset();
-      setErrorMsg(typeof error === 'string' ? error : error.message);
+      setErrorMsg(typeof error === 'string' ? error : error?.message);
     }
   });
 
