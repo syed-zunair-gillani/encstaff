@@ -16,7 +16,7 @@ export default function OrganizationalChart({
   variant = 'simple',
   sx,
   ...other
-}) {
+}:any) {
   const theme = useTheme();
 
   return (
@@ -39,7 +39,7 @@ export default function OrganizationalChart({
       }
       {...other}
     >
-      {data.children.map((list) => (
+      {data.children.map((list:any) => (
         <List key={list.name} depth={1} data={list} variant={variant} sx={sx} />
       ))}
     </Tree>
@@ -48,7 +48,7 @@ export default function OrganizationalChart({
 
 // ----------------------------------------------------------------------
 
-export function List({ data, depth, variant, sx }) {
+export function List({ data, depth, variant, sx }:any) {
   const hasChild = data.children && !!data.children;
 
   return (
@@ -80,10 +80,10 @@ export function List({ data, depth, variant, sx }) {
 
 // ----------------------------------------------------------------------
 
-function SubList({ data, depth, variant, sx }) {
+function SubList({ data, depth, variant, sx }:any) {
   return (
     <>
-      {data.map((list) => (
+      {data.map((list:any) => (
         <List key={list.name} data={list} depth={depth + 1} variant={variant} sx={sx} />
       ))}
     </>

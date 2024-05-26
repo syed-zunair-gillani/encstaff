@@ -49,7 +49,7 @@
       "extensions": [
         ".js",
         ".jsx",
-        "ts",
+        ".ts",
         ".tsx"
       ]
     }
@@ -77,8 +77,8 @@
     "src/app/dashboard/post/[title]/edit/page.jsx",
     "src/app/dashboard/post/page.jsx",
     "src/components/label/label.tsx",
-    "src/components/organizational-chart/common/group-node.jsx",
-    "src/components/organizational-chart/organizational-chart.jsx",
+    "src/components/organizational-chart/common/group-node.tsx",
+    "src/components/organizational-chart/organizational-chart.tsx",
     "src/layouts/common/nav-upgrade.jsx"
   ],
   "exclude": [

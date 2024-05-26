@@ -36,7 +36,7 @@ export default function OrganizationalChartView() {
       <Container sx={{ my: 10 }}>
         <Stack spacing={5}>
           <ComponentBlock title="Simple">
-            <OrganizationalChart data={SIMPLE_DATA} lineColor={theme.palette.primary.light} />
+            <OrganizationalChart data={SIMPLE_DATA} lineColor={theme.palette.primary.light}/>
           </ComponentBlock>
 
           <ComponentBlock title="Standard" sx={{ overflow: 'auto' }}>

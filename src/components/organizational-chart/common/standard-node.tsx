@@ -3,22 +3,22 @@ import Avatar from '@mui/material/Avatar';
 import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { Theme, SxProps } from '@mui/material/styles';
+// import { Theme, SxProps } from '@mui/material/styles';
 
 import Iconify from '../../iconify';
-import { ItemProps } from '../types';
+// import { ItemProps } from '../types';
 import CustomPopover, { usePopover } from '../../custom-popover';
 
 // ----------------------------------------------------------------------
 
-type Props = {
-  node: ItemProps;
-  onEdit?: VoidFunction;
-  onDelete?: VoidFunction;
-  sx?: SxProps<Theme>;
-};
+// type Props = {
+//   node: ItemProps;
+//   onEdit?: VoidFunction;
+//   onDelete?: VoidFunction;
+//   sx?: SxProps<Theme>;
+// };
 
-export default function StandardNode({ node, onEdit, onDelete, sx }: Props) {
+export default function StandardNode({ node, onEdit, onDelete, sx }: any) {
   const popover = usePopover();
 
   return (
