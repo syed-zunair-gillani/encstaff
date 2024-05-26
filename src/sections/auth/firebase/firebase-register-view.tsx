@@ -71,10 +71,10 @@ export default function FirebaseRegisterView() {
       const href = `${paths.auth.firebase.verify}?${searchParams}`;
 
       router.push(href);
-    } catch (error) {
+    } catch (error:any) {
       console.error(error);
       reset();
-      setErrorMsg(typeof error === 'string' ? error : error.message);
+      setErrorMsg(typeof error === 'string' ? error : error?.message);
     }
   });
 
