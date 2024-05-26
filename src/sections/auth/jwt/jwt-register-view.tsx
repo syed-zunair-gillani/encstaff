@@ -70,10 +70,10 @@ export default function JwtRegisterView() {
       await register?.(data.email, data.password, data.firstName, data.lastName);
 
       router.push(returnTo || PATH_AFTER_LOGIN);
-    } catch (error) {
+    } catch (error:any) {
       console.error(error);
       reset();
-      setErrorMsg(typeof error === 'string' ? error : error.message);
+      setErrorMsg(typeof error === 'string' ? error : error?.message);
     }
   });
 
