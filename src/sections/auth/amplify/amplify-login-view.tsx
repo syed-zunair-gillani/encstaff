@@ -66,10 +66,9 @@ export default function AmplifyLoginView() {
       await login?.(data.email, data.password);
 
       router.push(returnTo || PATH_AFTER_LOGIN);
-    } catch (error) {
-      console.error(error);
+    } catch (error:any) {
       reset();
-      setErrorMsg(typeof error === 'string' ? error : error.message);
+      setErrorMsg(typeof error === 'string' ? error : error?.message);
     }
   });
 
